@@ -1,15 +1,60 @@
-## intent:find_food
-- where can I find food <!-- no entity -->
-- I like to eat [chinese](food_type) food <!-- entity "food_type" has value "chinese" -->
-- the [japanese](food_type:chinese) around here is delicious <!-- synonyms, method 1-->
-- [kuala lumpur](location) has nice food
+# Rasa NLU
 
-<!-- ## intent:greet
-- hey
-- hello
+## Train
 
-## synonym:savings 
-- pink pig
+```bash
+$ make train
+```
 
-## regex:zipcode
-- [0-9]{5} -->
+Output:
+
+```json
+{
+  "info": "new model trained: model_20180412-105317"
+}
+```
+
+## Status
+
+```bash
+$ make test
+```
+
+Output:
+
+```json
+{
+    "available_projects": {
+        "default": {
+            "available_models": [
+                "fallback"
+            ],
+            "loaded_models": [
+                "fallback"
+            ],
+            "status": "ready"
+        },
+        "food": {
+            "available_models": [
+                "fallback",
+                "model_20180412-105317"
+            ],
+            "loaded_models": [
+                "fallback"
+            ],
+            "status": "ready"
+        }
+    }
+}
+```
+
+## Test
+
+```bash
+$ make test
+```
+
+Output:
+
+```json
+```
