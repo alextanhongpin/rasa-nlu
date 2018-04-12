@@ -1,7 +1,7 @@
 PROJECT_NAME := food
 SOURCE := train.md
 
-QUERY := where can I find chinese food in kuala lumpur
+QUERY := find japanese food
 
 up:
 	@docker-compose up -d
